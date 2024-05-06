@@ -46,10 +46,11 @@ class DatabaseImporterTest extends DatabaseTestCase
 
     /**
      * @test
-     * @expectedException \UnexpectedValueException
      */
     public function exception_is_thrown_when_guid_is_null()
     {
+        $this->expectException(\UnexpectedValueException::class);
+
         $u = $this->makeLdapUser([
             'objectguid' => null,
         ]);
@@ -59,10 +60,11 @@ class DatabaseImporterTest extends DatabaseTestCase
 
     /**
      * @test
-     * @expectedException \UnexpectedValueException
      */
     public function exception_is_thrown_when_guid_is_empty()
     {
+        $this->expectException(\UnexpectedValueException::class);
+
         $u = $this->makeLdapUser([
             'objectguid' => ' ',
         ]);
@@ -72,10 +74,11 @@ class DatabaseImporterTest extends DatabaseTestCase
 
     /**
      * @test
-     * @expectedException \UnexpectedValueException
      */
     public function exception_is_thrown_when_username_is_null()
     {
+        $this->expectException(\UnexpectedValueException::class);
+
         $u = $this->makeLdapUser([
             'userprincipalname' => null,
         ]);
@@ -85,10 +88,11 @@ class DatabaseImporterTest extends DatabaseTestCase
 
     /**
      * @test
-     * @expectedException \UnexpectedValueException
      */
     public function exception_is_thrown_when_username_is_empty()
     {
+        $this->expectException(\UnexpectedValueException::class);
+
         $u = $this->makeLdapUser([
             'userprincipalname' => ' ',
         ]);

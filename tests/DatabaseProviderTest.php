@@ -24,10 +24,11 @@ class DatabaseProviderTest extends DatabaseTestCase
 
     /**
      * @test
-     * @expectedException \RuntimeException
      */
     public function configuration_not_found_exception_when_config_is_null()
     {
+        $this->expectException(\RuntimeException::class);
+
         config(['ldap' => null]);
 
         App::make(AdldapInterface::class);
