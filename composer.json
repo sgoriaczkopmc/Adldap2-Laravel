@@ -11,14 +11,20 @@
     "type": "project",
     "require": {
         "php": ">=7.1",
-        "adldap2/adldap2": "^10.1",
-        "illuminate/support": "~5.5|~6.0|~7.0|~8.0|~9.0|^10.0"
+        "adldap2/adldap2": "dev-master",
+        "illuminate/support": "~5.5|~6.0|~7.0|~8.0|~9.0|^10.0|^11.0"
     },
     "require-dev": {
         "mockery/mockery": "~1.0",
         "phpunit/phpunit": "~7.0|~8.0|^9.5.10",
         "orchestra/testbench": "~3.7|~4.0|^8.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:storm-internet-services/Adldap2.git"
+        }
+    ],
     "archive": {
         "exclude": [
             "/tests"
